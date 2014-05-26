@@ -1,7 +1,7 @@
 {
   "name": "packmon",
   "version": "0.0.0",
-  "main": "lib/packmon.js",
+  "main": "server.js",
   "description": "Packet analyzer visualizer",
   "homepage": "https://github.com/satkumar/packmon",
   "bugs": "https://github.com/satkumar/packmon/issues",
@@ -19,6 +19,11 @@
     "lib"
   ],
   "keywords": [],
+  "dependencies": {
+    "pcap": "^1.2.0",
+    "express": "^3.4.4",
+    "node-uuid": "^1.2.0"
+  },
   "devDependencies": {
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-nodeunit": "^0.3.3",

@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="packmon">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Start Packet Capture using PackMoN</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+		#pack-mon-packet-capture 				{ margin-bottom:30px; }
+	</style>
+
+	<!-- SPELLS -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+	<script src="controller.js"></script>
+
+</head>
+<body ng-controller="capture">
+	<div class="container">
+		<!-- FORM TO CREATE capture session -->
+		<div id="capture-form" class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control input-lg text-center" placeholder="eth0" ng-model="capture.interface">
+            <input type="text" class="form-control input-lg text-center" placeholder="*all packets*" ng-model="capture.filter">
+					</div>
+					<!-- start Capture will start the capture session -->
+					<button type="submit" class="btn btn-primary btn-lg" ng-click="startCapture()">Start Capture!</button>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

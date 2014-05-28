@@ -1,0 +1,47 @@
+<!-- public/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+
+  <title>Packmon</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+
+  <!-- JS -->
+  <script src="libs/angular/angular.min.js"></script>
+  <script src="libs/angular-route/angular-route.min.js"></script>
+  <script src='libs/ngInfiniteScroll/build/ng-infinite-scroll.min.js'></script>
+
+  <!-- ANGULAR CUSTOM -->
+  <script src="js/controllers/StartCaptureController.js"></script>
+  <script src="js/controllers/ViewCaptureController.js"></script>
+  <script src="js/services/StartCaptureService.js"></script>
+  <script src="js/services/ViewCaptureService.js"></script>
+  <script src="js/appRoutes.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body ng-app="packmon">
+<div class="container">
+
+  <!-- HEADER -->
+  <nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Start a new Capture</a>
+    </div>
+
+    <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
+    <ul class="nav navbar-nav">
+      <li><a href="#">New Capture</a></li>
+      <li><a href="/view-capture">Existing Capture</a></li>
+    </ul>
+  </nav>
+
+  <!-- ANGULAR DYNAMIC CONTENT -->
+  <div ng-view></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- packet-capture.html -->
+<div class="jumbotron text-center">
+  <h1>Viewing capture session</h1>
+  <div infinite-scroll='capture.morePackets()' infinite-scroll-disabled='capture.busy' infinite-scroll-distance='1'>
+    <div ng-repeat='packet in capture.packets'>
+      <table>
+        <tr>
+          <th>
+            Destination port
+          </th>
+          <th>
+            Source Port
+          </th>
+        </tr>
+        <tr>
+          <td>{{packet.link.ip.tcp.dport}}</td>
+          <td>{{packet.link.ip.tcp.sport}}</td>
+        </tr>
+      </table>
+      <div style='clear: both;'></div>
+    </div>
+    <div ng-show='capture.busy'>Loading packets...</div>
+  </div>
+</div>

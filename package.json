@@ -22,7 +22,7 @@
   "dependencies": {
     "pcap": "^1.2.0",
     "express": "^3.4.4",
-    "node-uuid": "^1.2.0"
+    "ejs": "^0.8.8"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "^0.10.0",

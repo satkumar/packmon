@@ -2,8 +2,8 @@
 	<h1>Start Capture</h1>
 	<form>
 			<div class="form-group">
-				<input type="text" class="form-control input-lg text-center" placeholder="eth0" ng-model="capture.interface">
-        <input type="text" class="form-control input-lg text-center" placeholder="*all packets*" ng-model="capture.filter">
+				<input type="text" class="form-control input-lg text-center" placeholder="eth0" ng-model="formData.interface">
+        <input type="text" class="form-control input-lg text-center" placeholder="*all packets*" ng-model="formData.filter">
 			</div>
 			<button type="submit" class="btn btn-primary btn-lg" ng-click="startCapture('/view-capture')">Start Capture!</button>
 		</form>

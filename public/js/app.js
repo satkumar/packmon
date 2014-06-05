@@ -1,1 +1,1 @@
-angular.module('packmon',['ngRoute', 'appRoutes','StartCaptureController','StartCaptureService','ViewCaptureService']);
+angular.module('packmon',['ngRoute', 'appRoutes','StartCaptureController','CaptureService','ViewCaptureController']);

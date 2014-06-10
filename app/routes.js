@@ -13,9 +13,9 @@ module.exports = function(app) {
         var filterExpression = req.body.filter || "tcp port 80";
         console.log("Request was made to capture on " + device + " with filter expression " + filterExpression);
         var capturer = new packmon.Packmon();
-        var captureSession = capturer.startCapture(device,filterExpression);
+        capturer.startCapture(device,filterExpression);
         capturer.setupListeners();
-        res.send({'capturer': capturer,'session': captureSession});
+        res.send({'capturer': capturer});
       } catch(err) {
         res.send({'error': "Could not start capture session" + err.stack});
         console.log("Error occurred in creating a capture session: " + err.stack);

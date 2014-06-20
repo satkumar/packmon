@@ -24,13 +24,24 @@ module.exports = function(app) {
 
     app.post('/api/getPackets',function(req,res){
       try {
-        console.log("Getting packets for given packmon object");
         var capturer = req.body.packmon;
-        var packets = capturer.getPackets;
+        console.log("Get packets api call");
+        var packets = capturer.getPackets();
         res.send({'packets': packets});
       } catch(err) {
         res.send({'error': "Could not retrieve the packets for the given session: " + err.stack});
         console.log("Error: Could not retrieve packets from capture: " + err.stack);
+      }
+    });
+
+    app.post('/api/stopCapture',function(req,res) {
+      try {
+        console.log("Stopping the packet capture");
+        var capturer = req.body.capturer;
+        capturer.stopCapture();
+        res.send({});
+      } catch(err) {
+        res.send({'error': 'Could not stop the capture session : ' + err.stack});
       }
     });
   };

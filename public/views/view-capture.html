@@ -2,6 +2,8 @@
 <div class="jumbotron text-center">
   <h1>Viewing capture session</h1>
   <p>{{packetCount}}</p>
+  <button type="submit" class="btn btn-primary btn-lg" ng-click="stopCapture">Stop Capture!</button>
+
   <!-- <div infinite-scroll='capture.morePackets()' infinite-scroll-disabled='capture.busy' infinite-scroll-distance='1'>
     <div ng-repeat='packet in capture.packets'>
       <table>
